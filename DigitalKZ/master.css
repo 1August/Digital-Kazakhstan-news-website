@@ -1,0 +1,155 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main";
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  grid-area: navbar;
+  background-color: #262424;
+  color: #fafafa;
+  padding: 1% 0;
+}
+
+.nav .container-fluid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(100px, 2fr) 4fr minmax(100px, 1fr);
+}
+
+.nav__logo {
+  text-align: center;
+}
+
+.nav__logo img {
+  width: 60%;
+}
+
+.nav__info small {
+  font-size: 0.7rem;
+}
+
+.nav__AITU {
+  text-align: center;
+}
+
+.nav__AITU img {
+  width: 60%;
+}
+
+.sidebar {
+  padding: 1rem 0;
+  background-color: #262424;
+  grid-area: sidebar;
+}
+
+.sidebar .container {
+  justify-content: center;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  text-transform: uppercase;
+  margin: 15% 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.main {
+  padding: 2rem 0;
+  background-color: #f2f2f2;
+  grid-area: main;
+}
+
+.main .mapKz {
+  width: 100%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+ol {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+}
+
+ol li {
+  margin: 1%;
+}
+
+.main__digitalVideo {
+  margin: 3% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__moreContent img {
+  width: 100%;
+}
+
+.sidebar .active {
+  text-decoration: underline;
+}
+
+.radio {
+  margin: 0.5rem;
+}
+
+.radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio input[type=radio]+.radio-label:before {
+  content: "";
+  background: #f4f4f4;
+  border-radius: 100%;
+  border: 1px solid #b4b4b4;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  position: relative;
+  top: -0.2em;
+  margin-right: 1em;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+
+.radio input[type=radio]:checked+.radio-label:before {
+  background-color: #3197EE;
+  box-shadow: inset 0 0 0 4px #f4f4f4;
+}
+
+.radio input[type=radio]:focus+.radio-label:before {
+  outline: none;
+  border-color: #3197EE;
+}
+
+.radio input[type=radio]:disabled+.radio-label:before {
+  box-shadow: inset 0 0 0 4px #f4f4f4;
+  border-color: #b4b4b4;
+  background: #b4b4b4;
+}
+
+.radio input[type=radio]+.radio-label:empty:before {
+  margin-right: 0;
+}
